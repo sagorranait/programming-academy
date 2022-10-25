@@ -1,0 +1,94 @@
+.footer-section{
+   background: #212121;
+   padding: 40px 0;
+}
+
+.footer-section .about-area .logo-text{
+   padding-top: 10px;
+   height: max-content;
+}
+
+.footer-section .about-area .logo-text h2{
+   color: #FFF;
+   padding-bottom: 5px;
+}
+
+.footer-section .about-area .logo-text p{
+   color: #FFF;
+}
+
+.footer-section .about-area h4{
+   margin: 0;
+   font-size: 14px;
+   font-weight: 300;
+   line-height: 20px;
+   color: #FFFFFF;
+   text-align: center;
+   padding: 20px 0;
+}
+
+.footer-section .about-area .social-icons{
+   text-align: center;
+}
+
+.footer-section .about-area .social-icons a{
+   font-size: 20px;
+   color: #FFF;
+   padding-right: 20px;
+}
+
+.footer-section .about-area .social-icons a:last-child{
+   padding-right: 0;
+}
+
+.footer-section .quick-links {
+   padding: 5px 95px;
+}
+
+.footer-section .quick-links h2{
+   font-size: 18px;
+   line-height: 28px;
+   color: #FFF;
+}
+
+.footer-section .quick-links .links, 
+.footer-section .quick-links .info {
+   padding-top: 10px;
+}
+
+.footer-section .quick-links .links a, 
+.footer-section .quick-links .info p {
+   display: block;
+   font-size: 16px;
+   line-height: 24px;
+   color: #FFF;
+   text-decoration: none;
+   padding-bottom: 13px;
+}
+
+.footer-section .quick-links .info p{
+   padding-bottom: 10px;
+   margin: 0;
+}
+
+.footer-section .quick-links.contact{
+   padding: 5px 10px;
+}
+
+.footer-section .quick-links.social{
+   padding: 5px 70px;
+}
+
+.footer-section .quick-links .icons{
+   text-align: center;
+}
+
+.footer-section .quick-links .icons a{
+   font-size: 20px;
+   color: #FFF;
+   padding-right: 15px;
+}
+
+.footer-section .quick-links .icons a:last-child{
+   padding-right: 0;
+}
