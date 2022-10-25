@@ -45,6 +45,14 @@ function Header() {
             </NavLink>
           </Nav>
         </Navbar.Collapse>
+        <div className='nav-user navbar-nav'>
+            {/* <Link className='nav-link' to='/signin'>Sign In</Link> */}
+            <Link className='nav-link profile' to='/profile'>
+               <div className='user-pic'>
+                  <img src="https://lh3.googleusercontent.com/ogw/AOh-ky1_914eSu2bhz_LJsS4pMv8I_22G6moWZ7xnUv45A=s32-c-mo" alt="user" />
+               </div>
+            </Link>
+        </div>
       </Container>
    </Navbar>
   )
