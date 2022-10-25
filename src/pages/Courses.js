@@ -1,8 +1,14 @@
 import React from 'react'
+import Title from '../components/Title'
 
 function Courses() {
   return (
-    <div>Courses</div>
+    <>
+      <Title 
+        title="Courses" 
+        subTitle="Browse All Our Video Tutorials Curated Only for you."
+      />
+    </>
   )
 }
 

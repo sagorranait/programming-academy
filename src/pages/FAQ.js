@@ -1,8 +1,14 @@
 import React from 'react'
+import Title from '../components/Title'
 
 function FAQ() {
   return (
-    <div>FAQ</div>
+    <>
+      <Title 
+        title="Frequently Asked Questions" 
+        subTitle="Here are some common questions about programming academy."
+      />
+    </>
   )
 }
 

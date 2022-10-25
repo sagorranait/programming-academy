@@ -1,0 +1,24 @@
+.page-title{
+   padding: 45px 0;
+   background: #00BFFF;
+   margin-bottom: 30px;
+}
+
+.title-content{
+   text-align: center;
+}
+
+.title-content h2{
+   font-size: 25px;
+   font-weight: bold;
+   line-height: 30px;
+   color: #ffffff;
+   margin-bottom: 10px;
+}
+
+.title-content p{
+   margin: 0;
+   font-size: 14px;
+   line-height: 18px;
+   color: #ffffffab;
+}

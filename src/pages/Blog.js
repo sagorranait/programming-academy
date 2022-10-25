@@ -1,8 +1,14 @@
 import React from 'react'
+import Title from '../components/Title'
 
 function Blog() {
   return (
-    <div>Blog</div>
+    <>
+      <Title 
+        title="Blogs" 
+        subTitle="Be informed! Never miss a single post."
+      />
+    </>
   )
 }
 
