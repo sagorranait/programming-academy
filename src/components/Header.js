@@ -3,10 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link, NavLink } from 'react-router-dom';
 import '../styles/Header.css';
+import ThemeToggle from './ThemeToggle';
 
 function Header() {
   return (
-   <Navbar expand="lg" className='p-3'>
+   <Navbar expand="lg">
       <Container>
          <Link to='/' className='d-flex align-items-center text-decoration-none'>
             <img alt="Programming Academy" src="./images/logo.png" width="35" height="50" className="d-inline-block align-top" />
@@ -44,15 +45,16 @@ function Header() {
                FAQ
             </NavLink>
           </Nav>
-        </Navbar.Collapse>
+        <ThemeToggle/>
         <div className='nav-user navbar-nav'>
-            {/* <Link className='nav-link' to='/signin'>Sign In</Link> */}
-            <Link className='nav-link profile' to='/profile'>
+            <Link className='nav-link' to='/signin'>Sign In</Link>
+            {/* <Link className='nav-link profile' to='/profile'>
                <div className='user-pic'>
                   <img src="https://lh3.googleusercontent.com/ogw/AOh-ky1_914eSu2bhz_LJsS4pMv8I_22G6moWZ7xnUv45A=s32-c-mo" alt="user" />
                </div>
-            </Link>
+            </Link> */}
         </div>
+        </Navbar.Collapse>
       </Container>
    </Navbar>
   )

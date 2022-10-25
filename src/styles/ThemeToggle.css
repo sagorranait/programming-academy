@@ -1,0 +1,87 @@
+.button-switch {
+  font-size: 1.1em;
+  height: 29px;
+  position: relative;
+  width: 93px;
+  margin-right: 15px;
+}
+ 
+.button-switch .lbl-off, .button-switch .lbl-on {
+   cursor: pointer;
+   display: block;
+   font-size: 14px;
+   font-weight: bold;
+   line-height: 1em;
+   position: absolute;
+   top: 0.5em;
+   transition: opacity 0.25s ease-out 0.1s;
+}
+
+.button-switch .lbl-off {
+  right: 16px;
+  top: 8px;
+  color: #5C5C5C;
+}
+
+.button-switch .lbl-on {
+  color: #fefefe;
+  opacity: 0;
+  left: 13px;
+  top: 8px;
+}
+
+ .button-switch .switch {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   height: 0;
+   font-size: 1em;
+   left: 0;
+   line-height: 0;
+   outline: none;
+   position: absolute;
+   top: 0;
+   width: 0;
+ }
+
+ .button-switch .switch:before, .button-switch .switch:after {
+   content: "";
+   font-size: 1em;
+   position: absolute;
+ }
+
+ .button-switch .switch:before {
+  border-radius: 50px;
+  background: #bdc3c757;
+  height: 36px;
+  left: -2px;
+  top: -3px;
+  transition: background-color 0.25s ease-out 0.1s;
+  width: 93px;
+}
+
+.button-switch .switch:after {
+  border-radius: 50px;
+  background: #fefefe;
+  height: 30px;
+  transform: translate(0, 0);
+  transition: transform 0.25s ease-out 0.1s;
+  width: 30px;
+}
+
+ .button-switch .switch:checked:after {
+   transform: translate(2.5em, 0);
+   left: 15px;
+ }
+
+ .button-switch .switch:checked ~ .lbl-off {
+   opacity: 0;
+ }
+
+ .button-switch .switch:checked ~ .lbl-on {
+   opacity: 1;
+ }
+
+ .button-switch .switch#switch-blue:checked:before {
+   background: #5C5C5C;
+ }

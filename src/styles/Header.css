@@ -1,6 +1,7 @@
 .navbar {
    background: #fff;
    box-shadow: 0px 3px 20px rgb(0 0 0 / 9%);
+   padding: 24px !important;
 }
 
 .logo-text {
@@ -37,7 +38,7 @@
 .nav-user .nav-link {
    background: #FC476A;
    color: #fff !important;
-   padding: 8px 25px !important;
+   padding: 6px 20px !important;
    border-radius: 50px;
 }
 
