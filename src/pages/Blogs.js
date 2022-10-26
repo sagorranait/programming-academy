@@ -1,9 +1,14 @@
-import '../styles/Blog.css'
-import { Accordion, Col, Container, Row } from 'react-bootstrap'
+import '../styles/Blogs.css'
 import Title from '../components/Title'
+import { getBlogs } from '../helpers/server-api'
+import { useLoaderData } from 'react-router-dom'
+import { Accordion, Col, Container, Row } from 'react-bootstrap'
 import QuestionAccordion from '../components/QuestionAccordion'
+import Blog from '../components/Blog'
 
-function Blog() {
+function Blogs() {
+  const blogs = useLoaderData();
+
   return (
     <>
       <Title 
@@ -15,7 +20,9 @@ function Blog() {
         <Row>
           <Col sm={12} md={12} lg={12} xl={12} xxl={12}>
             <div className="blogs">
-              <h3>Blogs</h3>
+              <Row>
+                {blogs.map(blog => <Blog key={blog.id} blogData={blog} />)}
+              </Row>
             </div>
           </Col>
           <Col sm={12} md={12} lg={12} xl={12} xxl={12}>
@@ -54,4 +61,8 @@ function Blog() {
   )
 }
 
-export default Blog
+export const blogsLoader = () => {
+  return getBlogs();
+}
+
+export default Blogs

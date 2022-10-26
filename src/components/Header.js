@@ -33,7 +33,7 @@ function Header() {
                Courses
             </NavLink>
             <NavLink 
-               to='/blog' 
+               to='/blogs' 
                className={`nav-link ${({ isActive }) => isActive ? "active" : ""}` }
             >
                Blog

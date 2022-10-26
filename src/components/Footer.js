@@ -26,7 +26,7 @@ function Footer() {
                   <div className="links">
                      <Link to='/'>Home</Link>
                      <Link to='/courses'>Courses</Link>
-                     <Link to='/blog'>Blog</Link>
+                     <Link to='/blogs'>Blog</Link>
                      <Link to='/faq'>FAQ</Link>
                   </div>
                </div>
