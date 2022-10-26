@@ -25,4 +25,12 @@ export async function getCourses(){
    }
    return response.json();
 }
+
+export async function getSingleCourse(id) {
+   const response = await fetch('https://programming-academy.vercel.app/course/details/' + id);
+   if (!response.ok) {
+     throw new Error('Failed to fetch Single Course.');
+   }
+   return response.json();
+ }
 // API Functionality for Courses End

@@ -18,14 +18,14 @@ function Courses() {
       <section className='courses-area'>
         <Container>
           <Row>
-            <Col sm={12} md={12} lg={8} xl={8} xxl={8}>
+            <Col sm={12} md={12} lg={9} xl={9} xxl={9}>
               <div className="courses">
                 <Row>
                   { courses.map(course => <Course key={course.id} courseInfo={course}/>) }
                 </Row>
               </div>
             </Col>
-            <Col sm={12} md={12} lg={4} xl={4} xxl={4}>
+            <Col sm={12} md={12} lg={3} xl={3} xxl={3}>
               <div className="sidebar">
                 <h2>All Courses</h2>
                 <div className="sidebar-courses">
