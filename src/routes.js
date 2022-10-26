@@ -11,6 +11,7 @@ import Courses, { coursesLoader } from "./pages/Courses";
 import BlogDetails, { blogDetailsLoader } from "./components/BlogDetails";
 import CourseDetails, { courseDetailsLoader } from "./components/CourseDetails";
 import PremiumAccess, { premiumAccessLoader } from "./components/PremiumAccess";
+import NotFound from "./components/NotFound";
 
 const routers = createBrowserRouter([
    { 
@@ -28,6 +29,7 @@ const routers = createBrowserRouter([
          { path: 'signup', element: <SignUp/> },
          { path: 'profile', element: <Profile/> }
       ],
+      errorElement: <NotFound/>
    },
  ]);
 
