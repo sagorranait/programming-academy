@@ -1,8 +1,12 @@
+import React from 'react';
 import '../styles/CourseDetails.css';
 import { FaAngleLeft, FaStar } from "react-icons/fa";
 import { Link, useLoaderData } from 'react-router-dom';
 import { getSingleCourse } from '../helpers/server-api';
 import { Badge, Container } from 'react-bootstrap';
+import Pdf from "react-to-pdf";
+
+const ref = React.createRef();
 
 function CourseDetails() {
   const {id, title, price, image_url, rating, author, details} = useLoaderData();
@@ -25,18 +29,22 @@ function CourseDetails() {
                      </div>
                   </div>
                </div>
-               <button className='bownload-btn'>Download PDF</button>
+               <Pdf targetRef={ref} filename="code-example.pdf">
+                  {({ toPdf }) => <button className='bownload-btn' onClick={toPdf}>Download PDF</button>}
+               </Pdf>
             </div>
-            <div className='image'>
-               <img src={image_url} alt={title} />
+            <div className='pdf-preview' ref={ref}>
+               <div className='image'>
+                  <img src={image_url} alt={title} />
+               </div>
+               <div className='price'>
+                  <h5><Badge bg="secondary">{rating.badge}</Badge></h5>
+                  <h4><span>{rating.number}</span> <FaStar/></h4>
+                  <p>$ {price}</p>
+                  <Link to={`/premium/${id}`}>get premium access</Link>
+               </div>
+               <div className='content' dangerouslySetInnerHTML={{ __html: details }}/>
             </div>
-            <div className='price'>
-               <h5><Badge bg="secondary">{rating.badge}</Badge></h5>
-               <h4><span>{rating.number}</span> <FaStar/></h4>
-               <p>$ {price}</p>
-               <Link to={`/premium/${id}`}>get premium access</Link>
-            </div>
-            <div className='content' dangerouslySetInnerHTML={{ __html: details }}/>
          </div>
       </Container>
     </div>
