@@ -10,6 +10,7 @@ import Blogs, { blogsLoader } from "./pages/Blogs";
 import Courses, { coursesLoader } from "./pages/Courses";
 import BlogDetails, { blogDetailsLoader } from "./components/BlogDetails";
 import CourseDetails, { courseDetailsLoader } from "./components/CourseDetails";
+import PremiumAccess, { premiumAccessLoader } from "./components/PremiumAccess";
 
 const routers = createBrowserRouter([
    { 
@@ -19,7 +20,7 @@ const routers = createBrowserRouter([
          { index: true, element: <Home/> },
          { path: 'courses', element: <Courses/>, loader: coursesLoader },
          { path: '/course/details/:id', element: <CourseDetails/>, loader: courseDetailsLoader },
-         { path: '/premium/:id', element: <>sagor</>,},
+         { path: '/premium/:id', element: <PremiumAccess/>, loader: premiumAccessLoader},
          { path: 'blogs', element: <Blogs/>, loader: blogsLoader },
          { path: '/blog/details/:id', element: <BlogDetails/>, loader: blogDetailsLoader },
          { path: 'faq', element: <FAQ/> },
