@@ -16,3 +16,13 @@ export async function getSingleBlogs(id) {
  }
 
 // API Functionality for Blogs End
+
+// API Functionality for Courses Start
+export async function getCourses(){
+   const response = await fetch('https://programming-academy.vercel.app/courses');
+   if (!response.ok) {
+      throw new Error('Failed to fetch Courses.');
+   }
+   return response.json();
+}
+// API Functionality for Courses End

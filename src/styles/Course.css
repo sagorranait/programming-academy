@@ -1,0 +1,75 @@
+.course{}
+
+.course .image {
+   width: 100%;
+   height: 260px;
+   padding-bottom: 14px;
+}
+
+.course .image img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.course .content{}
+
+.course .content h5 span {
+   border-radius: 0;
+   background: #fc476a !important;
+}
+
+.course .content h3 {
+   font-size: 17.5px;
+   line-height: 26px;
+   color: #5C5C5C;
+   font-weight: bold;
+   margin: 0;
+}
+
+.course .content h4 {
+   margin: 0;
+   font-size: 14px;
+   line-height: 18px;
+   color: #5C5C5C;
+   padding: 0 0 8px;
+   display: flex;
+   align-items: center;
+   gap: 5px;
+}
+
+.course .content h4 svg{
+   font-size: 14px;
+   color: #FFD700;
+}
+
+.course .content p {
+   margin: 0;
+   font-size: 14px;
+   line-height: 18px;
+   color: #5C5C5C;
+   padding: 5px 0 8px;
+}
+
+.course .content .price-area{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.course .content .price-area p{
+   font-size: 17.5px;
+   line-height: 26px;
+   color: #04a6dd;
+   font-weight: bold;
+   margin: 0;
+}
+
+.course .content .price-area a{
+   background: #FC476A;
+   color: #fff;
+   padding: 6px 10px;
+   border-radius: 50px;
+   display: inline-block;
+   text-decoration: none;
+}
