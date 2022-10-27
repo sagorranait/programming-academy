@@ -13,7 +13,7 @@ function FAQ() {
       <section className='faq-questions'>
         <Container>
           <Row>
-            <Col sm={12} md={6} lg={6} xl={6} xxl={6}>
+            <Col sm={12} md={7} lg={6} xl={6} xxl={6}>
               <div className="questions">
                 <Accordion defaultActiveKey="0">
                   <QuestionAccordion 
@@ -39,7 +39,7 @@ function FAQ() {
                 </Accordion>
               </div>
             </Col>
-            <Col sm={12} md={6} lg={6} xl={6} xxl={6}>
+            <Col sm={12} md={5} lg={6} xl={6} xxl={6}>
               <div className="faq-image text-center">
                 <img src="./images/faq.png" alt="frequently-asked-questions" />
               </div>

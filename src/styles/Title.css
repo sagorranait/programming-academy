@@ -22,3 +22,39 @@
    line-height: 18px;
    color: #ffffffab;
 }
+
+/* Responsive Media Query */
+@media only screen and (max-width: 575.98px) {
+   .page-title {
+      padding: 20px 0;
+      margin-bottom: 15px;
+  }
+  .title-content h2 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 23px;
+   }
+   .title-content p {
+      font-size: 13px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+   .page-title {
+      padding: 20px 0;
+      margin-bottom: 15px;
+  }
+  .title-content h2 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 23px;
+   }
+   .title-content p {
+      font-size: 13px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992.98px) {
+   .page-title {
+      padding: 25px 0;
+      margin-bottom: 15px;
+  }
+}
