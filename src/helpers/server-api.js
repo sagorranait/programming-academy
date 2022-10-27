@@ -34,3 +34,13 @@ export async function getSingleCourse(id) {
    return response.json();
  }
 // API Functionality for Courses End
+
+// API Functionality for Feedback Start
+export async function getFeedback(){
+   const response = await fetch('https://programming-academy.vercel.app/testimonial');
+   if (!response.ok) {
+      throw new Error('Failed to fetch Feedback.');
+   }
+   return response.json();
+}
+// API Functionality for Feedback End
