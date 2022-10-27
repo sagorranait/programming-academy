@@ -12,7 +12,12 @@
 .dark-theme .courses-area, 
 .dark-theme .courses-area .courses, 
 .dark-theme .courses-area .sidebar,
-.dark-theme .blogs-area {
+.dark-theme .blogs-area,
+.dark-theme .faq-questions,
+.dark-theme .course-details,
+.dark-theme .blog-details,
+.dark-theme .signin-area,
+.dark-theme .premium-access {
    background: #212121;
 }
 
@@ -26,7 +31,30 @@
 .dark-theme .course .content h3,
 .dark-theme .course .content h4,
 .dark-theme .blog .content h3,
-.dark-theme .navbar-toggler{
+.dark-theme .navbar-toggler,
+.dark-theme .course-details .details .header .title h2,
+.dark-theme .course-details .details .header .user-information .user-info h3, 
+.dark-theme .course-details .details .header .user-information .user-info p,
+.dark-theme .course-details .details .content p, 
+.dark-theme .course-details .details .content ol, 
+.dark-theme .course-details .details .content h3,
+.dark-theme .course-details .details .content li, 
+.dark-theme .course-details a, 
+.dark-theme .course-details a span,
+.dark-theme .blog-details .details h2 ,
+.dark-theme .blog-details .details .user-details .user-info h3,
+.dark-theme .blog-details .details .user-details .user-info p,
+.dark-theme .blog-details .details .content p,
+.dark-theme .blog-details .details .content h3,
+.dark-theme .blog-details .details .content ol,
+.dark-theme  .blog-details .back-link a,
+.dark-theme  .blog-details .back-link svg path,
+.dark-theme .signin-area .signin-inputs p, 
+.dark-theme .user-platform h4,
+.dark-theme .user-form label,
+.dark-theme .premium-access .access-content h2,
+.dark-theme .premium-access .access-content h3,
+.dark-theme .premium-access .access-content p{
    color: #FFF;
 }
 
@@ -51,6 +79,13 @@
    color: #FFF !important;
 }
 
-.dark-theme{}
-.dark-theme{}
-.dark-theme{}
+.dark-theme .carousel-dark .carousel-indicators [data-bs-target]{
+   background-color: #fff;
+}
+
+/* .dark-theme
+.dark-theme .premium-access .access-content h2
+.dark-theme .premium-access .access-content h3
+.dark-theme .premium-access .access-content p
+.dark-theme .carousel-dark .carousel-indicators [data-bs-target]
+.dark-theme */
