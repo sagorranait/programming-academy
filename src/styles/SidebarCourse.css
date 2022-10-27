@@ -6,3 +6,12 @@
    display: block;
    padding-bottom: 30px;
 }
+
+/* Responsive Media Query */
+@media screen and (min-width: 768px) and (max-width: 992.98px) {
+   .course {
+      font-size: 14px;
+      line-height: 23px;
+      padding-bottom: 15px;
+  }
+}
