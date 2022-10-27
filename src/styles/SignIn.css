@@ -26,3 +26,10 @@
    font-size: 14px;
    padding: 5px 24px 20px;
 }
+
+/* Responsive Media Query */
+@media only screen and (max-width: 575.98px) {
+   .signin-area .signin-inputs {
+      width: 100%;
+  }
+}

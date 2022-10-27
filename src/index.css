@@ -73,3 +73,15 @@ code {
   align-items: center;
   justify-content: center;
 }
+
+/* Responsive Media Query */
+@media only screen and (max-width: 575.98px) {
+  #agree {
+    margin: 15px 10px 25px 10px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  #agree {
+    margin: 15px 10px 25px 10px;
+  }
+}

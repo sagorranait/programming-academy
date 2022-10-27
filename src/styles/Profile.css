@@ -33,3 +33,23 @@
 .student-profile .profile-input button{
    margin-top: 20px;
 }
+
+/* Responsive Media Query */
+@media only screen and (max-width: 575.98px) {
+   .student-profile {
+      height: 510px;
+  }
+
+  .student-profile .user-profile {
+      padding-top: 5px;
+   }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+   .student-profile {
+      height: 510px;
+  }
+
+  .student-profile .user-profile {
+      padding-top: 5px;
+   }
+}
