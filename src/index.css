@@ -65,3 +65,11 @@ code {
 #agree {
   margin: 15px 10px 25px 24px;
 }
+
+.loading-section{
+  background: #FFF;
+  height: 590px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

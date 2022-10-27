@@ -1,0 +1,35 @@
+.student-profile{
+   height: 580px;
+}
+
+.student-profile .profile-input .logout{
+   background: #FC476A;
+   color: #fff;
+   padding: 8px 20px;
+   border-radius: 50px;
+   border: none;
+   display: block;
+   margin: 0 0 30px auto;
+}
+
+.student-profile .user-profile{
+   padding-top: 25px;
+}
+
+.student-profile .user-profile label {
+   padding: 15px 0px 5px 24px;
+}
+
+#profileNameInput,
+#profileUrlInput {
+  background: #FFFFFF;
+  border: 1px solid #5C5C5C;
+  border-radius: 100px;
+  width: 100%;
+  padding: 15px 20px;
+  margin-top: 5px;
+}
+
+.student-profile .profile-input button{
+   margin-top: 20px;
+}

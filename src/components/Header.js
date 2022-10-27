@@ -6,11 +6,18 @@ import { Link, NavLink } from 'react-router-dom';
 import '../styles/Header.css';
 import ThemeToggle from './ThemeToggle';
 import { StateContext } from '../StateProvider';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 function Header() {
-  const {user} = useContext(StateContext);
+  const {student} = useContext(StateContext);
 
-  console.log(user);
+  const renderTooltip = (props) => (
+      <Tooltip id="button-tooltip" {...props}>
+         {student?.displayName}
+      </Tooltip>
+   );
+
+
   return (
    <Navbar expand="lg">
       <Container>
@@ -52,16 +59,21 @@ function Header() {
           </Nav>
         <ThemeToggle/>
         <div className='nav-user navbar-nav'>
-        <Link className='nav-link' to='/signin'>Sign In</Link>
-            {/* {
-               user?.email ? 
-               <Link className='nav-link' to='/signin'>Sign In</Link> : 
-               <Link className='nav-link profile' to='/profile'>
-                  <div className='user-pic'>
-                     <img src={user?.photoURL} alt="user" />
-                  </div>
-               </Link>
-            } */}
+            {
+               student?.email ? 
+               <OverlayTrigger
+                  placement="bottom"
+                  delay={{ show: 250, hide: 400 }}
+                  overlay={renderTooltip}
+               >
+                  <Link className='nav-link profile' to='/profile'>
+                     <div className='user-pic'>
+                        <img src={student?.photoURL} alt="user" />
+                     </div>
+                  </Link>
+               </OverlayTrigger>
+               : <Link className='nav-link' to='/signin'>Sign In</Link>
+            }
         </div>
         </Navbar.Collapse>
       </Container>

@@ -14,7 +14,7 @@ import { auth } from './firebase.config';
 export const StateContext = createContext();
 
 const StateProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
+    const [student, setStudent] = useState(null);
     const [loading, setLoading] = useState(true);
 
     const providerSignin = (provider) => {
@@ -43,7 +43,7 @@ const StateProvider = ({ children }) => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setUser(currentUser);            
+            setStudent(currentUser);            
             setLoading(false);
         });
 
@@ -51,7 +51,7 @@ const StateProvider = ({ children }) => {
     }, [])
 
     const authInfo = { 
-        user, 
+        student, 
         loading, 
         setLoading,
         signUp, 

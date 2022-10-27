@@ -1,11 +1,19 @@
+import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { useStateValue } from "./StateProvider";
+import Loading from "./components/Loading";
+import { StateContext } from './StateProvider';
+
+
 
 function RequireAuth({ children }) {
-   const [{user}] = useStateValue();
+  const {student, loading} = useContext(StateContext);
    let location = useLocation();
 
-   if (!user) {
+  if (loading) {
+    return <Loading/>;
+  }
+
+   if (!student) {
      return <Navigate to="/about" state={{ from: location }} replace />
    }
  

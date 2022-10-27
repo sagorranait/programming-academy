@@ -29,7 +29,7 @@ function CourseDetails() {
                      </div>
                   </div>
                </div>
-               <Pdf targetRef={ref} filename="code-example.pdf">
+               <Pdf targetRef={ref} filename={title}>
                   {({ toPdf }) => <button className='bownload-btn' onClick={toPdf}>Download PDF</button>}
                </Pdf>
             </div>
