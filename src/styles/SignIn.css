@@ -1,0 +1,28 @@
+.signin-area{
+   background: #FFF;
+   padding: 50px 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.signin-area .signin-inputs{
+   width: 450px;
+   margin: 0 auto;
+}
+
+.signin-area .signin-inputs p{
+   text-align: center;
+   font-size: 16px;
+   line-height: 175.78%;
+   color: #5C5C5C;
+   font-weight: 600;
+   margin-bottom: 0px;
+}
+
+.signin-area .user-form p {
+   text-align: left;
+   font-weight: 400;
+   font-size: 14px;
+   padding: 5px 24px 20px;
+}

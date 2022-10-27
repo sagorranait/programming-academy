@@ -14,3 +14,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#emailInput, 
+#passwordInput,
+#nameInput,
+#urlInput {
+  background: #FFFFFF;
+  border: 1px solid #5C5C5C;
+  border-radius: 100px;
+  width: 100%;
+  padding: 15px 20px;
+  margin-top: 25px;
+}
+
+.user-form button {
+  background: #FC476A;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.user-platform{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.user-platform h4{
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: rgb(139, 139, 139);
+}
+
+.user-platform button{
+  background: #FC476A;
+  color: #fff;
+  padding: 15px 50px;
+  border-radius: 50px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+#agree {
+  margin: 15px 10px 25px 24px;
+}
