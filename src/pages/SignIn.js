@@ -28,6 +28,7 @@ function SignIn() {
       navigate(from, { replace: true });
     })
     .catch((error) => {
+      setLogging(false);
       const errorMessage = error.message;
       toast.error(errorMessage?.split('/')[1]?.replace(').', '').split('-').join(' '));
     })

@@ -42,6 +42,7 @@ function SignUp() {
         navigate('/signin');
       })
       .catch(error => {
+        setSubmitting(false);
         const errorMessage = error.message;
         toast.error(errorMessage?.split('/')[1]?.replace(').', '').split('-').join(' '));
       });
