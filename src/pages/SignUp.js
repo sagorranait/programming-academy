@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 import '../styles/SignIn.css';
 
 function SignUp() {
+
+  const signUpHandler = (event) => {
+    event.preventDefault();
+    
+  }
+
   return (
     <section className='signin-area'>
       <Container>
@@ -11,7 +17,7 @@ function SignUp() {
           <Col sm={12} md={12} lg={12} xl={12} xxl={12}>
             <div className="signin-inputs">
               <p>Please create a new account here</p>
-              <form className='user-form'>
+              <form className='user-form' onSubmit={signUpHandler}>
                 <input type="text" name="name" id="nameInput" placeholder='Name' />
                 <input type="url" name="photoUrl" id="urlInput" placeholder='Photo URL' />
                 <input type="email" name="email" id="emailInput" placeholder='Email' />

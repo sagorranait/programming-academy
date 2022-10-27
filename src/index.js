@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from 'react-router-dom';
 import {routers} from './routes';
+import {StateProvider} from './stateProvider';
+import reducer, {initialState} from './reducer';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={routers} />
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <RouterProvider router={routers} />
+    </StateProvider>
   </React.StrictMode>
 );
 
