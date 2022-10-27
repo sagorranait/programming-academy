@@ -6,14 +6,14 @@ function Service() {
     <section className='service-area'>
       <Container>
          <Row>
-            <Col sm={12} md={12} lg={4} xl={4} xxl={4}>
+            <Col sm={12} md={6} lg={4} xl={4} xxl={4}>
                <div className="service">
                   <img src="./images/unlimited-access.png" alt="unlimited-access" />
                   <h3>Unlimited Access</h3>
                   <p>One subscription of our course, you'll get unlimited access.</p>
                </div>
             </Col>
-            <Col sm={12} md={12} lg={4} xl={4} xxl={4}>
+            <Col sm={12} md={6} lg={4} xl={4} xxl={4}>
                <div className="service">
                   <img src="./images/expert-teachers.png" alt="expert-teachers" />
                   <h3>Expert Teachers</h3>

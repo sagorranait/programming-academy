@@ -108,6 +108,9 @@
   .footer-section .quick-links.social {
       padding: 5px 40px;
    }
+   .footer-section .quick-links .links a, .footer-section .quick-links .info p {
+      font-size: 14px;
+  }
 }
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
    .footer-section {
@@ -123,6 +126,10 @@
   .footer-section .quick-links.social {
       padding: 5px 40px;
    }
+
+   .footer-section .quick-links .links a, .footer-section .quick-links .info p {
+      font-size: 14px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 992.98px) {
    .footer-section .quick-links {
@@ -131,6 +138,9 @@
   }
 }
 @media screen and (min-width: 993px) and (max-width: 1200.98px) {
+   .footer-section {
+      padding: 40px 0 10px;
+  }
    .footer-section .quick-links {
       padding: 16px 36px;
   }

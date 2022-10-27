@@ -56,11 +56,95 @@
    width: 500px;
    margin: 0 auto;
    font-size: 14px;
-   line-height: 17px;
+   line-height: 24px;
    color: #5C5C5C;
 }
 
 .carousel-control-next,
 .carousel-control-prev {
    display: none !important;
+}
+
+/* Responsive Media Query */
+@media only screen and (max-width: 575.98px) {
+   .feedback-area {
+      padding: 30px 0;
+  }
+
+  .feedback-area .content h2 {
+      font-size: 22px;
+      line-height: 24px;
+      padding-bottom: 0;
+      margin: 0;
+   }
+
+   .feedback-area .content .feedbacks {
+      width: 100%;
+  }
+
+  .feedback-area .content .feedbacks .feedback {
+      height: 340px;
+      padding: 0 10px 10px;
+   }
+
+   .feedback-area .content .feedbacks .feedback h3 {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 148.7%;
+  }
+
+  .feedback-area .content .feedbacks .feedback p {
+      width: 100%;
+      font-size: 14px;
+      line-height: 24px;
+   }
+}
+@media screen and (min-width: 576px) and (max-width: 767.99px) {
+   .feedback-area {
+      padding: 30px 0;
+  }
+
+  .feedback-area .content h2 {
+      font-size: 22px;
+      line-height: 24px;
+      padding-bottom: 0;
+      margin: 0;
+   }
+
+   .feedback-area .content .feedbacks {
+      width: 100%;
+  }
+
+  .feedback-area .content .feedbacks .feedback {
+      height: 340px;
+      padding: 0 10px 10px;
+   }
+
+   .feedback-area .content .feedbacks .feedback h3 {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 148.7%;
+  }
+
+  .feedback-area .content .feedbacks .feedback p {
+      width: 100%;
+      font-size: 14px;
+      line-height: 24px;
+   }
+}
+@media screen and (min-width: 768px) and (max-width: 992.99px) {
+   .feedback-area .content .feedbacks .feedback {
+      height: 272px;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200.98px) {
+   .feedback-area {
+      padding: 30px 0;
+  }
+
+  .feedback-area .content h2 {
+   padding-bottom: 0;
+   margin: 0;
+}
 }

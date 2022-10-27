@@ -26,3 +26,17 @@
    text-decoration: none;
    font-weight: 600;
 }
+
+/* Responsive Media Query */
+@media only screen and (max-width: 575.98px) {
+   .course-offer {
+      padding: 15px 0;
+  }
+  .course-offer .offer-content {
+      flex-direction: column;
+   }
+
+   .course-offer .offer-content p {
+      padding-bottom: 10px;
+  }
+}

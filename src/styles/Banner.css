@@ -51,3 +51,73 @@
 .banner-area .image img{
    width: 100%;
 }
+
+/* Responsive Media Query */
+@media only screen and (max-width: 575.98px) {
+   .banner-area .content {
+      place-items: center;
+  }
+  .banner-area .content small {
+   font-size: 13px;
+   font-weight: 600;
+}
+  .banner-area .content h1 {
+   font-size: 20px;
+   line-height: 29px;
+   text-align: center;
+}
+.banner-area .content p {
+   font-size: 14px;
+   padding: 0;
+   text-align: center;
+}
+   .banner-area .image {
+      margin-top: 50px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+   .banner-area .content {
+      place-items: center;
+  }
+  .banner-area .content small {
+   font-size: 13px;
+   font-weight: 600;
+}
+  .banner-area .content h1 {
+   font-size: 20px;
+   line-height: 29px;
+   text-align: center;
+}
+.banner-area .content p {
+   font-size: 14px;
+   padding: 0;
+   text-align: center;
+}
+   .banner-area .image {
+      margin-top: 50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992.98px) {
+   .banner-area .content h1 {
+      font-size: 25px;
+      line-height: 35px;
+      margin: 0;
+  }
+  .banner-area .content a {
+      margin-top: 8px;
+   }
+
+   .banner-area .content small {
+      font-size: 15px;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200.98px) {
+   .banner-area .content h1 {
+      font-size: 30px;
+      line-height: 36px;
+  }
+  .banner-area {
+      padding: 40px 0;
+   }
+}
+@media screen and (min-width: 1201px) and (max-width: 1399.98px) {}
