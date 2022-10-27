@@ -69,8 +69,7 @@ function Header() {
                >
                   <Link className='nav-link profile' to='/profile'>
                      <div className='user-pic'>
-                        {student?.photoURL ? <img src={student?.photoURL} alt="user" /> : `${student?.displayName[0]}`}
-                        {/* <img src={student?.photoURL} alt="user" /> */}
+                        <img src={student?.photoURL} alt="user" />
                      </div>
                   </Link>
                </OverlayTrigger>

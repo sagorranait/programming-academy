@@ -13,7 +13,7 @@ function SignIn() {
   let navigate = useNavigate();
   let location = useLocation();
 
-  let from = location.state?.from?.pathname || "/";
+  let from = location.state?.from?.pathname || "/";  
 
   const signInHandler = (e) => {
     e.preventDefault();
