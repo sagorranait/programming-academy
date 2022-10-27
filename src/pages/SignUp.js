@@ -35,11 +35,11 @@ function SignUp() {
 
     signUp(email, password)
     .then(() => {
+      toast.success('Successfully account created.');
+      navigate('/signin');
       updateUserProfile({displayName: name, photoURL: photoUrl})
       .then(()=>{
         setSubmitting(false);
-        toast.success('Successfully account created.');
-        navigate('/signin');
       })
       .catch(error => {
         setSubmitting(false);
@@ -48,6 +48,7 @@ function SignUp() {
       });
     })
     .catch((error) => {
+      setSubmitting(false);
       const errorMessage = error.message;
       toast.error(errorMessage?.split('/')[1]?.replace(').', '').split('-').join(' '));
     });
