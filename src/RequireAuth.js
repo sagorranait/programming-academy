@@ -14,7 +14,7 @@ function RequireAuth({ children }) {
   }
 
    if (!student) {
-     return <Navigate to="/about" state={{ from: location }} replace />
+     return <Navigate to="/signin" state={{ from: location }} replace />
    }
  
    return children;

@@ -3,15 +3,14 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link, NavLink } from 'react-router-dom';
-import '../styles/Header.css';
 import ThemeToggle from './ThemeToggle';
 import { StateContext } from '../StateProvider';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { FaBars } from "react-icons/fa";
+import '../styles/Header.css';
 
 function Header() {
   const {student} = useContext(StateContext);
-
-  console.log(student)
 
   const renderTooltip = (props) => (
       <Tooltip id="button-tooltip" {...props}>
@@ -30,7 +29,7 @@ function Header() {
                <p>A Family Of Learning</p>
             </div>
          </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav"><FaBars/></Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <NavLink 

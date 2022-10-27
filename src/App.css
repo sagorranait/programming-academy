@@ -1,0 +1,56 @@
+.dark-theme{
+   background: #212121;
+}
+
+.dark-theme .navbar, 
+.dark-theme .service-area{
+   background: #000;
+}
+
+.dark-theme .banner-area,
+.dark-theme .feedback-area,
+.dark-theme .courses-area, 
+.dark-theme .courses-area .courses, 
+.dark-theme .courses-area .sidebar,
+.dark-theme .blogs-area {
+   background: #212121;
+}
+
+.dark-theme .logo-text h2, 
+.dark-theme .logo-text p,
+.dark-theme .banner-area .content h1,
+.dark-theme .service-area .service h3,
+.dark-theme .feedback-area .content h2,
+.dark-theme .feedback-area .content .feedbacks .feedback h3,
+.dark-theme .courses-area .sidebar h2,
+.dark-theme .course .content h3,
+.dark-theme .course .content h4,
+.dark-theme .blog .content h3,
+.dark-theme .navbar-toggler{
+   color: #FFF;
+}
+
+.dark-theme .banner-area .content p,
+.dark-theme .service-area .service p,
+.dark-theme .feedback-area .content .feedbacks .feedback p,
+.dark-theme .course,
+.dark-theme .course .content p, 
+.dark-theme .blog .content p,
+.dark-theme .blogs-area .blogs h3 {
+   color: #ffffffa6;
+}
+
+.dark-theme .accordion-item{
+   background: #212121 !important;
+}
+
+.dark-theme .navbar-nav a, 
+.dark-theme button.accordion-button,
+.dark-theme button.accordion-button:not(.collapsed),
+.dark-theme .accordion-body {
+   color: #FFF !important;
+}
+
+.dark-theme{}
+.dark-theme{}
+.dark-theme{}

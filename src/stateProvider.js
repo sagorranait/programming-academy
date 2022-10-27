@@ -16,6 +16,7 @@ export const StateContext = createContext();
 const StateProvider = ({ children }) => {
     const [student, setStudent] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [darkMord, setdarkMord] = useState('');
 
     const providerSignin = (provider) => {
         setLoading(true);
@@ -55,6 +56,8 @@ const StateProvider = ({ children }) => {
         setStudent,
         loading, 
         setLoading,
+        darkMord,
+        setdarkMord,
         signUp, 
         signIn,
         signOutUser, 
