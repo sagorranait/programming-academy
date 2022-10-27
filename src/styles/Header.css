@@ -69,6 +69,10 @@
       padding: 12px !important;
   }
 
+  .navbar-nav .nav-link.active {
+      margin-bottom: 5px;
+   }
+
   .navbar img {
       width: 25px;
       height: 35px;
@@ -110,6 +114,10 @@
       padding: 12px !important;
   }
 
+  .navbar-nav .nav-link.active {
+   margin-bottom: 5px;
+}
+
   .navbar img {
       width: 25px;
       height: 35px;
@@ -150,6 +158,10 @@
    .navbar-collapse {
       padding: 20px 0 0;
   }
+
+  .navbar-nav .nav-link.active {
+   margin-bottom: 6px;
+}
 
   .button-switch {
       margin-top: 8px;

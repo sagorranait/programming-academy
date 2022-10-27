@@ -38,3 +38,71 @@
    text-decoration: none;
    margin-top: 10px;
 }
+
+/* Responsive Media Query */
+@media only screen and (max-width: 575.98px) {
+   .blog {
+      margin-bottom: 20px;
+  }
+
+  .blog .content h3 {
+      font-size: 15px;
+      font-weight: 600;
+   }
+
+   .blog .content p {
+      font-size: 13px;
+      line-height: 15px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+   .blog {
+      margin-bottom: 20px;
+  }
+
+  .blog .content h3 {
+      font-size: 15px;
+      font-weight: 600;
+   }
+
+   .blog .content p {
+      font-size: 13px;
+      line-height: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992.98px) {
+   .blog {
+      margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200.98px) {
+   .blog .image {
+      height: 170px;
+  }
+
+  .blog .content h3 {
+      font-size: 15px;
+      line-height: 22px;
+      font-weight: 700;
+   }
+
+   .blog .content p {
+      line-height: 21px;
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1399.98px) {
+   .blog .image {
+      height: 200px;
+  }
+
+  .blog .content h3 {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+   }
+
+   .blog .content p {
+      line-height: 21px;
+      font-size: 13px;
+  }
+}
