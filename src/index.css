@@ -37,6 +37,11 @@ code {
   margin: 0 auto;
 }
 
+.user-form button:disabled,
+.user-form button[disabled]{
+  background-color: #fc476ac7;
+}
+
 .user-platform{
   text-align: center;
   padding-top: 20px;

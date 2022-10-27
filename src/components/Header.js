@@ -1,11 +1,16 @@
+import { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link, NavLink } from 'react-router-dom';
 import '../styles/Header.css';
 import ThemeToggle from './ThemeToggle';
+import { StateContext } from '../StateProvider';
 
 function Header() {
+  const {user} = useContext(StateContext);
+
+  console.log(user);
   return (
    <Navbar expand="lg">
       <Container>
@@ -47,12 +52,16 @@ function Header() {
           </Nav>
         <ThemeToggle/>
         <div className='nav-user navbar-nav'>
-            <Link className='nav-link' to='/signin'>Sign In</Link>
-            {/* <Link className='nav-link profile' to='/profile'>
-               <div className='user-pic'>
-                  <img src="https://lh3.googleusercontent.com/ogw/AOh-ky1_914eSu2bhz_LJsS4pMv8I_22G6moWZ7xnUv45A=s32-c-mo" alt="user" />
-               </div>
-            </Link> */}
+        <Link className='nav-link' to='/signin'>Sign In</Link>
+            {/* {
+               user?.email ? 
+               <Link className='nav-link' to='/signin'>Sign In</Link> : 
+               <Link className='nav-link profile' to='/profile'>
+                  <div className='user-pic'>
+                     <img src={user?.photoURL} alt="user" />
+                  </div>
+               </Link>
+            } */}
         </div>
         </Navbar.Collapse>
       </Container>

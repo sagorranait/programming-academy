@@ -1,10 +1,71 @@
-import React, { createContext, useContext, useReducer } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
+import { 
+   createUserWithEmailAndPassword, 
+   onAuthStateChanged, 
+   signInWithEmailAndPassword, 
+   signInWithPopup, 
+   signOut, 
+   updateProfile 
+} from 'firebase/auth';
+
+import { auth } from './firebase.config';
+
 
 export const StateContext = createContext();
 
-export const StateProvider = ({ reducer, initialState, children }) => (
-<StateContext.Provider value={useReducer(reducer, initialState)} >
-{children}
-</StateContext.Provider>);
+const StateProvider = ({ children }) => {
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-export const useStateValue = () => useContext(StateContext);
+    const providerSignin = (provider) => {
+        setLoading(true);
+        return signInWithPopup(auth, provider);
+    }
+
+    const signUp = (email, password) => {
+        setLoading(true);
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
+
+    const signIn = (email, password) => {
+        setLoading(true);
+        return signInWithEmailAndPassword(auth, email, password);
+    }
+
+    const updateUserProfile = (profile) => {
+        return updateProfile(auth.currentUser, profile);
+    }
+
+    const signOutUser = () => {
+        setLoading(true);
+        return signOut(auth);
+    }
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);            
+            setLoading(false);
+        });
+
+        return () => unsubscribe();
+    }, [])
+
+    const authInfo = { 
+        user, 
+        loading, 
+        setLoading,
+        signUp, 
+        signIn,
+        signOutUser, 
+        providerSignin, 
+        updateUserProfile,
+    };
+
+    return (
+        <StateContext.Provider value={authInfo}>
+            {children}
+        </StateContext.Provider>
+    );
+};
+
+export default StateProvider;

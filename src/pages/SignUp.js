@@ -1,13 +1,54 @@
+import { useContext, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap'
 import { FaGoogle, FaGithubAlt } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import { StateContext } from '../StateProvider';
 import '../styles/SignIn.css';
 
 function SignUp() {
+  const {signUp, updateUserProfile} = useContext(StateContext);
+  let navigate = useNavigate();
+  const [disable, setDisable] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  const agreeHandler = (event) => {
+    setDisable(event.target.checked);
+  }
 
   const signUpHandler = (event) => {
     event.preventDefault();
-    
+    setSubmitting(true);
+    const name = event.target.name.value;
+    const photoUrl = event.target.photoUrl.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    if (name.length < 3) {
+      toast.error("Name is too short!");
+    }
+
+    if (password.length < 5) {
+      toast.error("Password is too short!");
+    }
+
+    signUp(email, password)
+    .then(() => {
+      updateUserProfile({displayName: name, photoURL: photoUrl})
+      .then(()=>{
+        setSubmitting(false);
+        toast.success('Successfully account created.');
+        navigate('/signin');
+      })
+      .catch(error => {
+        const errorMessage = error.message;
+        toast.error(errorMessage?.split('/')[1]?.replace(').', '').split('-').join(' '));
+      });
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      toast.error(errorMessage?.split('/')[1]?.replace(').', '').split('-').join(' '));
+    });
   }
 
   return (
@@ -20,11 +61,11 @@ function SignUp() {
               <form className='user-form' onSubmit={signUpHandler}>
                 <input type="text" name="name" id="nameInput" placeholder='Name' />
                 <input type="url" name="photoUrl" id="urlInput" placeholder='Photo URL' />
-                <input type="email" name="email" id="emailInput" placeholder='Email' />
-                <input type="password" name="password" id="passwordInput" placeholder='Password' />
-                <input type="checkbox" name="agree" id="agree" />
+                <input type="email" name="email" id="emailInput" placeholder='Email' required />
+                <input type="password" name="password" id="passwordInput" placeholder='Password' required />
+                <input type="checkbox" name="agree" id="agree" onClick={agreeHandler} />
                 <label htmlFor="agree">I've read the <Link>Terms</Link> & <Link>Condition</Link></label>
-                <button type="submit">Sign Up</button>
+                <button type="submit" disabled={!disable}>{submitting ? 'Submitting...' : 'Sign Up'}</button>
               </form>
               <div className="user-platform">
                 <h4>or</h4>
