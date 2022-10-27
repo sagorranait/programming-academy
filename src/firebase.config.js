@@ -1,16 +1,18 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth, GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAenOEijodpG_wpNDSO2sJ7NANogN3A-aQ",
-  authDomain: "programming-academy-app.firebaseapp.com",
-  projectId: "programming-academy-app",
-  storageBucket: "programming-academy-app.appspot.com",
-  messagingSenderId: "779371799391",
-  appId: "1:779371799391:web:21c4cd0142b41274f14cea"
-};
+    apiKey: process.env.REACT_APP_APIKEY,
+    authDomain: process.env.REACT_APP_AUTHDOMAIN,
+    projectId: process.env.REACT_APP_PROJECTID,
+    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+    appId: process.env.REACT_APP_APPID
+  };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const GoogleProvider = new GoogleAuthProvider();
+const GithubProvider = new GithubAuthProvider();
 
-export {auth}
+export { auth, GoogleProvider, GithubProvider }

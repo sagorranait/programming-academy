@@ -51,7 +51,8 @@ const StateProvider = ({ children }) => {
     }, [])
 
     const authInfo = { 
-        student, 
+        student,
+        setStudent,
         loading, 
         setLoading,
         signUp, 

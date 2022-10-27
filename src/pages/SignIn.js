@@ -5,9 +5,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import '../styles/SignIn.css';
 import { StateContext } from '../StateProvider';
+import { GithubProvider, GoogleProvider } from '../firebase.config';
 
 function SignIn() {
-  const {signIn, setLoading} = useContext(StateContext);
+  const {signIn, setLoading, setStudent, providerSignin} = useContext(StateContext);
   const [logging, setLogging] = useState(false);
   let navigate = useNavigate();
   let location = useLocation();
@@ -37,6 +38,34 @@ function SignIn() {
     e.target.reset();
   }
 
+  const singupWithGoogleHandler = () => {
+    providerSignin(GoogleProvider)
+    .then((result) => {
+      // The signed-in user info.
+      const user = result.user;
+      setStudent(user);
+      toast.success('Sign-In Successfully.');
+      navigate('/');
+    }).catch((error) => {
+      const errorMessage = error.message;
+      toast.error(errorMessage?.split('/')[1]?.replace(').', '').split('-').join(' '));
+    });
+  }
+
+  const singupWithGithubHandler = () => {
+    providerSignin(GithubProvider)
+    .then((result) => {
+      // The signed-in user info.
+      const user = result.user;
+      setStudent(user);
+      toast.success('Sign-In Successfully.');
+      navigate('/');
+    }).catch((error) => {
+      const errorMessage = error.message;
+      toast.error(errorMessage?.split('/')[1]?.replace(').', '').split('-').join(' '));
+    });
+  }
+
   return (
     <section className='signin-area'>
       <Container>
@@ -52,8 +81,8 @@ function SignIn() {
               </form>
               <div className="user-platform">
                 <h4>or</h4>
-                <button><FaGoogle/> Sing in with Google</button>
-                <button><FaGithubAlt/> Sing in with Github</button>
+                <button onClick={singupWithGoogleHandler}><FaGoogle/> Sing in with Google</button>
+                <button onClick={singupWithGithubHandler}><FaGithubAlt/> Sing in with Github</button>
               </div>
             </div>
           </Col>

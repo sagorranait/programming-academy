@@ -5,9 +5,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { StateContext } from '../StateProvider';
 import '../styles/SignIn.css';
+import { GithubProvider, GoogleProvider } from '../firebase.config';
 
 function SignUp() {
-  const {signUp, updateUserProfile} = useContext(StateContext);
+  const {setStudent, signUp, updateUserProfile, providerSignin} = useContext(StateContext);
   let navigate = useNavigate();
   const [disable, setDisable] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -51,6 +52,34 @@ function SignUp() {
     });
   }
 
+  const singupWithGoogleHandler = () => {
+    providerSignin(GoogleProvider)
+    .then((result) => {
+      // The signed-in user info.
+      const user = result.user;
+      setStudent(user);
+      toast.success('Sign-In Successfully.');
+      navigate('/');
+    }).catch((error) => {
+      const errorMessage = error.message;
+      toast.error(errorMessage?.split('/')[1]?.replace(').', '').split('-').join(' '));
+    });
+  }
+
+  const singupWithGithubHandler = () => {
+    providerSignin(GithubProvider)
+    .then((result) => {
+      // The signed-in user info.
+      const user = result.user;
+      setStudent(user);
+      toast.success('Sign-In Successfully.');
+      navigate('/');
+    }).catch((error) => {
+      const errorMessage = error.message;
+      toast.error(errorMessage?.split('/')[1]?.replace(').', '').split('-').join(' '));
+    });
+  }
+
   return (
     <section className='signin-area'>
       <Container>
@@ -69,8 +98,8 @@ function SignUp() {
               </form>
               <div className="user-platform">
                 <h4>or</h4>
-                <button><FaGoogle/> Sing up with Google</button>
-                <button><FaGithubAlt/> Sing up with Github</button>
+                <button onClick={singupWithGoogleHandler}><FaGoogle/> Sing up with Google</button>
+                <button onClick={singupWithGithubHandler}><FaGithubAlt/> Sing up with Github</button>
               </div>
             </div>
           </Col>
