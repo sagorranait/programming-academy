@@ -1,0 +1,53 @@
+.banner-area{
+   background: #FFF;
+   padding: 50px 0;
+}
+
+.banner-area .content {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.banner-area .content small {
+   font-size: 16px;
+   color: #00bfff;
+   font-weight: bold;
+}
+
+.banner-area .content h1 {
+   font-size: 36px;
+   line-height: 45px;
+   color: #5C5C5C;
+   font-weight: bold;
+   text-transform: capitalize;
+}
+
+.banner-area .content p {
+   margin: 0;
+   font-size: 15px;
+   line-height: 152.34%;
+   color: #5C5C5C;
+   padding: 5px 0;
+}
+
+.banner-area .content a {
+   display: inline-block;
+   background: #FC476A;
+   color: #fff;
+   padding: 6px 20px;
+   border-radius: 50px;
+   text-decoration: none;
+   margin-top: 15px;
+   font-weight: 600;
+}
+
+.banner-area .image{
+   width: 100%;
+}
+.banner-area .image img{
+   width: 100%;
+}

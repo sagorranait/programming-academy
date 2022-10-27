@@ -1,0 +1,29 @@
+.service-area{
+   background: #FFF;
+   padding: 90px 0;
+}
+
+.service-area .service{
+   text-align: center;
+}
+
+.service-area .service img {
+   height: 75px;
+   margin-bottom: 25px;
+}
+
+.service-area .service h3{
+   font-size: 20px;
+   font-weight: bold;
+   line-height: 182.7%;
+   color: #5C5C5C;
+   margin: 0;
+}
+
+.service-area .service p {
+   width: 300px;
+   margin: 0 auto;
+   font-size: 14px;
+   line-height: 17px;
+   color: #5C5C5C;
+}
