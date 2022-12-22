@@ -42,9 +42,10 @@
    border-radius: 50px;
 }
 
-.nav-user .nav-link.profile{
+.nav-user .nav-link.profile {
    padding: 2px !important;
    border-bottom: 0px;
+   width: fit-content;
 }
 
 .nav-user .nav-link.profile .user-pic{
